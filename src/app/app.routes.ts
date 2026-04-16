@@ -29,11 +29,11 @@ export const routes: Routes = [
     {path:"brands", component:BrandsComponent,title:"brands page"},
     {path:"wishlist", component:Wishlist,title:"wishlist page", canActivate:[authGuard]},
     {path:"cart", component:CartComponent, title:"cart page", canActivate:[authGuard]},
-    {path:"product-details/:id/:slug", component:ProductDetails, title:"product-details page"},
+    {path:"product-details", component:ProductDetails, title:"product-details page"},
     {path:"checkout/:id", component:Checkout, title:"checkout page" , canActivate:[authGuard]},
     {path:"forgot", component:Forgot, title:"forgot password page"},
     {path:"all-orders", component:AllOrders, title:"all orders page" , canActivate:[authGuard]},
     {path:"profile", component:Profile, title:"profile page"},
     {path:"**", component:NotFound, title:"notfound page"},
-    {path:"specific-brand/:id/:slug" , component:SpecificBrand, title:"specific-brand page"},
+    {path:"specific-brand" , component:SpecificBrand, title:"specific-brand page"},
 ];
