@@ -30,7 +30,7 @@ export const routes: Routes = [
     {path:"wishlist", component:Wishlist,title:"wishlist page", canActivate:[authGuard]},
     {path:"cart", component:CartComponent, title:"cart page", canActivate:[authGuard]},
     {path:"product-details", component:ProductDetails, title:"product-details page"},
-    {path:"checkout/:id", component:Checkout, title:"checkout page" , canActivate:[authGuard]},
+    {path:"checkout", component:Checkout, title:"checkout page" , canActivate:[authGuard]},
     {path:"forgot", component:Forgot, title:"forgot password page"},
     {path:"all-orders", component:AllOrders, title:"all orders page" , canActivate:[authGuard]},
     {path:"profile", component:Profile, title:"profile page"},

@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+body{
+    font-family: Exo;
+}
 
 @layer  theme{
     @import 'tailwindcss';
@@ -9,6 +12,3 @@
 }
 
 
-body{
-    font-family: Exo;
-}
