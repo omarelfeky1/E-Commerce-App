@@ -1,0 +1,34 @@
+<section class="p-10">
+  <div class="container">
+    <h2 class="text-3xl font-semibold">Featured <span class="text-emerald-600">products</span></h2>
+
+    <div class="mt-5 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+      @for (
+        product of productList()
+          | paginate
+            : { id: 'foo', itemsPerPage: pageSize(), currentPage: cp(), totalItems: total() };
+        track product._id
+      ) {
+        <!-- component -->
+        <app-card [product]="product" />
+      }
+    </div>
+
+    <div class="flex justify-center items-center my-4 ">
+      <pagination-controls
+        (pageChange)="pageChange($event)"
+        id="foo"
+        [maxSize]="9"
+        [directionLinks]="true"
+        [autoHide]="true"
+        [responsive]="true"
+        previousLabel="Previous"
+        nextLabel="Next"
+        screenReaderPaginationLabel="Pagination"
+        screenReaderPageLabel="page"
+        screenReaderCurrentLabel="You're on page"
+      >
+      </pagination-controls>
+    </div>
+  </div>
+</section>

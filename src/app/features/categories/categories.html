@@ -1,0 +1,33 @@
+<section class="bg-linear-to-br from-green-600 to-green-300 text-white py-16 px-10">
+  <p class="text-sm opacity-80 mb-2">
+    <a routerLink="/home" class="text-gray-300 font-semibold hover:text-white mr-2 cursor-pointer"
+      >Home</a
+    >
+    / <a class="font-semibold ml-2 cursor-pointer">Categories</a>
+  </p>
+  <div class="flex items-center gap-4 pt-3">
+    <div
+      class="flex items-center justify-center w-14 h-14 rounded-2xl bg-gr text-white text-4xl mask-b-from-6"
+    >
+      <i class="fa-solid fa-layer-group"></i>
+    </div>
+    <div>
+      <h3 class="font-bold text-white text-4xl mb-2">All Categories</h3>
+      <p class="text-white opacity-90">Browse our wide range of product categories</p>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 py-10">
+  <div class="container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+    @for (category of categoriesList(); track category._id) {
+      <div class="bg-white shadow-lg rounded-xl p-8 text-center hover:shadow-2xl transition ease-in-out hover:translate-y-2 duration-200 group cursor-pointer hover:text-green-500">
+        <img [src]="category.image" class="mx-auto mb-4 rounded-2xl h-44 w-48" />
+        <p class="font-semibold">{{ category.name }}</p>
+        <p class="text-sm text-green-500 opacity-0 group-hover:opacity-100 transition pt-3">
+          View Subcategories <i class="fa-solid fa-arrow-right text-2xs"></i>
+        </p>
+      </div>
+    }
+  </div>
+</section>

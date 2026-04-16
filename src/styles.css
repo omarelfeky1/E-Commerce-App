@@ -1,0 +1,9 @@
+@charset "UTF-8";
+@import 'tailwindcss';
+@import "flowbite/src/themes/default";
+@import 'ngx-toastr/toastr';
+@import 'animate.css';
+
+body{
+    font-family: Exo;
+}
